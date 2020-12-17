@@ -1,36 +1,51 @@
-#include <cs50.h>
 #include <stdio.h>
+#include <cs50.h>
 
 int main(void)
 {
+    // Prompt user to type input height.
+    // Check input is within range of 1-8.
+    // If input is invalid, re-prompt user
+    // for another input.
 
-    int n;
+    int x;
 
     do
     {
-
-        n = get_int("Height: ");
-
+        x = get_int("Height:");
     }
-    while (n < 0 || n > 8 || n == 0);
-    for (int y = 0; y < n; y++)
+    while (x < 1 || x > 8);
+
+
+    for (int i = 0; i < x; i++)
     {
+        // Print spaces
 
-        for (int x = 0; x < (n - y - 1); x++)
+        for (int j = 0; j < (x - (i + 1)); j++)
         {
-
             printf(" ");
-
         }
 
-        for (int x = 0; x < (y + 1); x++)
+        // Print left hashes
+
+        for (int j = 0; j < (i + 1); j++)
         {
-
             printf("#");
-
-            printf("\n");
-
         }
-    }
 
+        // Print gap
+
+        printf("  ");
+
+        // Print right hashes
+
+        for (int j = 0; j < (i + 1); j++)
+        {
+            printf("#");
+        }
+
+        // Print new line
+
+        printf("\n");
+    }
 }
