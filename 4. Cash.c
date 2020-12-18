@@ -8,8 +8,7 @@ int main(void)
 //_____________________________________
 
     float d;
-
-
+    
     do
     {
         d = get_float("Change owed: ");
@@ -58,5 +57,4 @@ int main(void)
 //_____________________________________
 
     printf("%i\n", total);
-
 }
